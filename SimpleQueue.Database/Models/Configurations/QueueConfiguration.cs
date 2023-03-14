@@ -20,6 +20,8 @@ namespace SimpleQueue.Database.Models.Configurations
         /// <inheritdoc />
         public void Configure(EntityTypeBuilder<QueueDefinition> builder)
         {
+            builder.HasIndex(x => x.Name).IsUnique();
+
             // Wire up the queue items collection
             builder.HasMany(x => x.QueueItems).WithOne(x => x.QueueDefinition);
         }
