@@ -13,14 +13,14 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace SimpleQueue.Database.Models.Configurations
 {
     /// <summary>
-    /// Configures the <see cref="QueueItem"/> type.
+    /// Configures the <see cref="QueueItemDefinition"/> type.
     /// </summary>
-    public sealed class QueueItemConfiguration : IEntityTypeConfiguration<QueueItem>
+    public sealed class QueueItemConfiguration : IEntityTypeConfiguration<QueueItemDefinition>
     {
         /// <inheritdoc />
-        public void Configure(EntityTypeBuilder<QueueItem> builder)
+        public void Configure(EntityTypeBuilder<QueueItemDefinition> builder)
         {
-            builder.Ignore(x => x.JsonValueWrapper);
+            builder.Ignore(x => x.QueueDataWrapper);
         }
     }
 }

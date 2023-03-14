@@ -21,6 +21,7 @@
 	<StyleCopConfiguration>$(MSBuildThisFileDirectory)stylecop.json</StyleCopConfiguration>
 	  
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
 	  
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 

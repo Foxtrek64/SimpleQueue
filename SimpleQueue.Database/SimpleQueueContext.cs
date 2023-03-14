@@ -26,7 +26,7 @@ namespace SimpleQueue.Database
         /// <summary>
         /// Gets a set of queue items.
         /// </summary>
-        public DbSet<QueueItem> QueueItems => Set<QueueItem>();
+        public DbSet<QueueItemDefinition> QueueItems => Set<QueueItemDefinition>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleQueueContext"/> class.

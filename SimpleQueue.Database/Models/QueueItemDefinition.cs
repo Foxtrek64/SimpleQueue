@@ -1,5 +1,5 @@
 ﻿//
-//  QueueItem.cs
+//  QueueItemDefinition.cs
 //
 //  Author:
 //       TAFS RPA Developers
@@ -17,7 +17,7 @@ namespace SimpleQueue.Database.Models
     /// <summary>
     /// Represents a queue item.
     /// </summary>
-    public sealed record class QueueItem
+    public sealed record class QueueItemDefinition
     {
         /// <summary>
         /// Gets the unique id of this queue item.
@@ -64,7 +64,7 @@ namespace SimpleQueue.Database.Models
         /// <summary>
         /// Gets the failed queue item the current queue item is retrying.
         /// </summary>
-        public QueueItem? Ancestor { get; init; }
+        public QueueItemDefinition? Ancestor { get; init; }
 
         /// <summary>
         /// Gets the current retry iteration.
@@ -79,7 +79,7 @@ namespace SimpleQueue.Database.Models
         /// <summary>
         /// Gets or sets the JSON data contained in this record.
         /// </summary>
-        public JsonDocument? JsonValueWrapper
+        public JsonDocument? QueueDataWrapper
         {
             get { return QueueData is null ? null : JsonDocument.Parse(QueueData); }
             set { QueueData = value?.ToString(); }

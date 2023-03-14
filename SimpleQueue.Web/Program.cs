@@ -1,17 +1,29 @@
+//
+//  Program.cs
+//
+//  Author:
+//       TAFS RPA Developers
+//
+//  Copyright (c) 2021 TAFS, LLC.. All rights reserved.
+//
+
 using Microsoft.AspNetCore.Authentication.Negotiate;
 
 namespace SimpleQueue.Web
 {
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
     public class Program
     {
-        public static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
 
             builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
-            .AddNegotiate();
+             .AddNegotiate();
 
             builder.Services.AddAuthorization(options =>
             {
@@ -35,6 +47,7 @@ namespace SimpleQueue.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapRazorPages();

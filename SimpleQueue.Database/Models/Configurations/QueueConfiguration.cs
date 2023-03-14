@@ -1,5 +1,5 @@
 ﻿//
-//  QueueDefinitionConfiguration.cs
+//  QueueConfiguration.cs
 //
 //  Author:
 //       TAFS RPA Developers
@@ -15,7 +15,7 @@ namespace SimpleQueue.Database.Models.Configurations
     /// <summary>
     /// Configures the <see cref="QueueDefinition"/> type.
     /// </summary>
-    public sealed class QueueDefinitionConfiguration : IEntityTypeConfiguration<QueueDefinition>
+    public sealed class QueueConfiguration : IEntityTypeConfiguration<QueueDefinition>
     {
         /// <inheritdoc />
         public void Configure(EntityTypeBuilder<QueueDefinition> builder)

@@ -88,11 +88,11 @@ namespace SimpleQueue.Database.Models
         /// <summary>
         /// Gets a list of the queue items belonging to this queue.
         /// </summary>
-        public IReadOnlyList<QueueItem> QueueItems => _queueItems.AsReadOnly();
+        public IReadOnlyList<QueueItemDefinition> QueueItems => _queueItems.AsReadOnly();
 
         /// <summary>
         /// Gets a list of the queue items associated with this queue.
         /// </summary>
-        private List<QueueItem> _queueItems = new();
+        private List<QueueItemDefinition> _queueItems = new();
     }
 }
